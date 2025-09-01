@@ -1,3 +1,4 @@
+import React, { type JSX } from 'react';
 import {
   MDBBtn,
   MDBContainer,
@@ -12,12 +13,16 @@ import { customerConfig } from "../configs/customerConfig";
 
 import { useMsal } from "@azure/msal-react";
 
-function MainComponent() {
+// Tipamos el componente como un Functional Component (React.FC)
+function MainComponent(): JSX.Element {
   const { instance, accounts } = useMsal();
-  const handleLogout = () => {
+  
+  // Tipamos el manejador de eventos con 'void'
+  const handleLogout = (): void => {
     // Lógica para cerrar la sesión
     instance.logoutPopup();
   };
+
   return (
     <MDBContainer className="my-5 d-flex justify-content-center">
       <MDBCard style={{ maxWidth: "900px", width: "100%" }}>
@@ -34,11 +39,10 @@ function MainComponent() {
             />
           </MDBCol>
 
-          {/* Renderiza el contenido según el estado de autenticación */}
           <MDBCol md="6" className="p-4">
             <MDBCardBody className="d-flex flex-column align-items-center justify-content-center">
               <h2 className="fw-bold mb-4 text-center">
-                ¡Hola, {accounts[0] && accounts[0].username}!
+                ¡Hola, {accounts?.[0]?.username}! {/* Uso de optional chaining */}
               </h2>
               <p>Has iniciado sesión correctamente.</p>
               <MDBBtn className="mb-4" onClick={handleLogout}>
