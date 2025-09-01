@@ -1,4 +1,6 @@
 import { useState, type ChangeEvent, type JSX } from "react";
+import { useMsal } from "@azure/msal-react";
+
 import {
   MDBBtn,
   MDBContainer,
@@ -9,9 +11,9 @@ import {
   MDBCol,
   MDBInput,
 } from "mdb-react-ui-kit";
-import { customerConfig } from "../configs/customerConfig.js";
-import { useMsal } from "@azure/msal-react";
-import { loginRequest } from "../configs/authConfigs.js";
+
+import { customerConfig } from "../configs/customerConfig.ts";
+import { loginRequest } from "../configs/authConfigs.ts";
 
 function Login(): JSX.Element {
   // 1. Tipado del estado

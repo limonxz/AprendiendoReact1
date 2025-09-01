@@ -1,4 +1,4 @@
-import React, { type JSX } from 'react';
+import { type JSX } from "react";
 import {
   MDBBtn,
   MDBContainer,
@@ -9,14 +9,14 @@ import {
   MDBCol,
 } from "mdb-react-ui-kit";
 
-import { customerConfig } from "../configs/customerConfig";
+import { customerConfig } from "../configs/customerConfig.ts";
 
 import { useMsal } from "@azure/msal-react";
 
 // Tipamos el componente como un Functional Component (React.FC)
 function MainComponent(): JSX.Element {
   const { instance, accounts } = useMsal();
-  
+
   // Tipamos el manejador de eventos con 'void'
   const handleLogout = (): void => {
     // Lógica para cerrar la sesión
@@ -42,7 +42,8 @@ function MainComponent(): JSX.Element {
           <MDBCol md="6" className="p-4">
             <MDBCardBody className="d-flex flex-column align-items-center justify-content-center">
               <h2 className="fw-bold mb-4 text-center">
-                ¡Hola, {accounts?.[0]?.username}! {/* Uso de optional chaining */}
+                ¡Hola, {accounts?.[0]?.username}!{" "}
+                {/* Uso de optional chaining */}
               </h2>
               <p>Has iniciado sesión correctamente.</p>
               <MDBBtn className="mb-4" onClick={handleLogout}>
