@@ -11,7 +11,10 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "standard": "^17.1.2"
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "standard": "^17.1.2",
+    "typescript": "^5.9.2"
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
