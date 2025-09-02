@@ -1,0 +1,78 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a2333;
+  color: #ffffff;
+  padding: 0 20px;
+  height: 60px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  border-radius: 8px; /* Redondea las esquinas del contenedor del logo */
+  padding: 3px 3px; /* Relleno alrededor del logo dentro de su contenedor */
+}
+
+.logo img {
+  height: 40px;
+  /* Redondeamos las esquinas de la imagen misma */
+  border-radius: 0px; /* Ajusta este valor para el nivel de redondez deseado */
+}
+
+.logoText {
+  font-weight: bold;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0px;
+}
+
+.navLinks li {
+  position: relative;
+  padding: 0 15px; /* Espaciado interno para cada ítem del menú principal */
+  height: 100%; /* Asegura que ocupe toda la altura de la navbar para el hover */
+  display: flex; /* Para centrar el enlace verticalmente si hay padding */
+  align-items: center; /* Centra el enlace verticalmente */
+}
+
+.navLinks li:hover {
+    background-color: #2a3f5a; /* Un color ligeramente más oscuro para el hover del ítem principal */
+}
+
+.navLinks li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.navLinks li a:hover {
+  color: #f0f2f5;
+}
+
+.navbarRight {
+  display: flex;
+  align-items: center;
+}
+
+.userInfo {
+  font-size: 14px;
+}

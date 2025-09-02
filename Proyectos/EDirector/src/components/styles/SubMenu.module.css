@@ -1,0 +1,40 @@
+.subMenu {
+  position: absolute;
+  top: 100%; /* Posiciona el submenú justo debajo del borde inferior del li */
+  left: 0; /* Lo alinea con el borde izquierdo del li */
+  
+  /* Arregla el posicionamiento para que no tenga un margen superior extraño */
+  margin-top: 0; 
+
+  list-style: none;
+  background-color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 220px;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+}
+
+/* El texto de los ítems del submenú debe ser oscuro para verse en el fondo blanco */
+.subMenuItem a {
+  display: block;
+  color: #333; /* Color de texto oscuro para los ítems no seleccionados */
+  text-decoration: none;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
+
+/* Efecto de hover: cuando el cursor está sobre el ítem del submenú */
+.subMenuItem:hover {
+  background-color: #f0f0f0; /* Un gris muy claro */
+  cursor: pointer;
+}
+
+/* Color del texto en hover para asegurar la visibilidad */
+.subMenuItem:hover a {
+  color: #333;
+}

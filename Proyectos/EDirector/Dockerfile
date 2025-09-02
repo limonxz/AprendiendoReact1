@@ -15,16 +15,16 @@ RUN npm install && npm audit fix --force
 COPY . .
 
 # Expose the port your app runs on
-EXPOSE 5173
+# EXPOSE 5173
 
 # Construye la aplicación para producción
-CMD ["npm", "start"]
+# CMD ["npm", "start"]
 
 # Production Stage
-#RUN npm run build
+RUN npm run build
 
 # Usa una imagen ligera de servidor web para servir los archivos estáticos
-# FROM nginx:1-alpine-slim
-# COPY --from=builder /app/dist /usr/share/nginx/html
-# EXPOSE 80
-# CMD ["nginx", "-g", "daemon off;"]
+FROM nginx:1-alpine-slim
+COPY --from=builder /app/dist /usr/share/nginx/html
+EXPOSE 5173
+CMD ["nginx", "-g", "daemon off;"]
