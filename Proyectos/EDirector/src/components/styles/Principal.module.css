@@ -1,0 +1,90 @@
+/* Container principal de la página */
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Tarjeta principal (el equivalente a MDBCard) */
+.mainCard {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Fila dentro de la tarjeta (equivalente a MDBRow) */
+.cardRow {
+  display: flex;
+  width: 100%;
+}
+
+/* Sección del logo (equivalente a MDBCol md="6") */
+.logoSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.logoImage {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Sección del contenido (equivalente a MDBCol md="6") */
+.contentSection {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;;
+}
+
+/* Botones */
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btnPrimary {
+  background-color: #4285f4;
+  color: white;
+}
+
+.btnPrimary:hover {
+  background-color: #357ae8;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .cardRow {
+    flex-direction: column;
+  }
+}

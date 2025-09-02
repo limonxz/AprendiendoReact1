@@ -1,0 +1,131 @@
+/* Contenido del archivo Login.css */
+
+.loginPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.loginCard {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+}
+
+.cardRow {
+  display: flex;
+  width: 100%;
+}
+
+.logoSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.logoImage {
+  max-width: 80%;
+  height: auto;
+}
+
+.formSection {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.formTitle {
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.inputGroup {
+  width: 100%;
+  position: relative;
+}
+
+.inputGroup label {
+  top: 50%;
+  left: 1rem;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.inputGroup input:focus + label,
+.inputGroup input:not(:placeholder-shown) + label {
+  top: 0;
+  left: 0.5rem;
+  transform: translateY(-120%);
+  font-size: 0.75rem;
+  color: #333;
+  background: #fff;
+  padding: 0 5px;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btnPrimary {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  background-color: #4285f4;
+  color: white;
+}
+
+.btnPrimary:hover {
+  background-color: #357ae8;
+}
+
+.btnSecondary {
+  background-color: #fff;
+  color: #666;
+  border: 1px solid #ccc;
+}
+
+.btnSecondary:hover {
+  background-color: #f8f8f8;
+}
+
+.footerLogoImage {
+  max-width: 60%;
+  min-width: 200px;
+  height: auto;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .cardRow {
+    flex-direction: column;
+  }
+}
